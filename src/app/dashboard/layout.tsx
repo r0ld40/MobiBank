@@ -6,9 +6,9 @@ export default function RootDash({
   children: React.ReactNode;
 }>) {
   return (
-    <div suppressHydrationWarning={true}>
-      <main className="flex gap-5">
-        <Aside />
+    <div suppressHydrationWarning={true} className="flex bg-[#FBFBFB]">
+      <Aside />
+      <main className='p-7'>
         {children}
       </main>
     </div>
