@@ -1,4 +1,4 @@
-import Aside from '@/components/common/AsideDash';
+import Aside from '@/components/AsideDash';
 
 export default function RootDash({
   children,

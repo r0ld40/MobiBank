@@ -1,3 +1,9 @@
+import CardClient from "./over-card";
+
 export default function OverView() {
-  return <div>dash</div>;
+  return(
+    <div>
+      <CardClient />
+    </div>
+  )
 }
