@@ -1,14 +1,7 @@
 import React from 'react';
 
-const Cel = ({ width = 20, height = 20, fill = "#ffffff", ...props }) => (
-  <svg
-    viewBox="0 0 512 512"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    width={width}
-    height={height}
-    {...props}
-  >
+const Cel = ({ width = 20, height = 20, fill = '#ffffff', ...props }) => (
+  <svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" width={width} height={height} {...props}>
     <g strokeWidth="0"></g>
     <g strokeLinecap="round" strokeLinejoin="round"></g>
     <g>
