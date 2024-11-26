@@ -1,4 +1,5 @@
 import Aside from '@/components/AsideDash';
+import DashSearch from '@/components/DashSearch';
 
 export default function RootDash({
   children,
@@ -6,9 +7,10 @@ export default function RootDash({
   children: React.ReactNode;
 }>) {
   return (
-    <div suppressHydrationWarning={true} className="flex bg-[#FBFBFB]">
+    <div suppressHydrationWarning={true} className="flex bg-[#FBFBFB] overflow-hidden">
       <Aside />
-      <main className='p-7'>
+      <main className="w-full flex flex-col items-center p-7">
+        <DashSearch />
         {children}
       </main>
     </div>

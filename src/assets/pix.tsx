@@ -1,14 +1,7 @@
 import React from 'react';
 
-const Pix = ({ width = 20, height = 20, fill = "#ffffff", ...props }) => (
-  <svg
-    viewBox="0 0 16 16"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    width={width}
-    height={height}
-    {...props}
-  >
+const Pix = ({ width = 20, height = 20, fill = '#ffffff', ...props }) => (
+  <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" width={width} height={height} {...props}>
     <g strokeWidth="0"></g>
     <g strokeLinecap="round" strokeLinejoin="round"></g>
     <g>

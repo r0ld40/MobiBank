@@ -1,13 +1,7 @@
 import React from 'react';
 
-const Config = ({ width = 18, height = 18, fill = "#000" }) => (
-  <svg
-    viewBox="0 0 28 28"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    width={width}
-    height={height}
-  >
+const Config = ({ width = 18, height = 18, fill = '#000' }) => (
+  <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" width={width} height={height}>
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
     <g id="SVGRepo_iconCarrier">

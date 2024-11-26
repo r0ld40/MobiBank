@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Receive = ({ width = 24, height = 24, stroke = "#ffffff", className = "" }) => (
+const Receive = ({ width = 24, height = 24, stroke = '#ffffff', className = '' }) => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -19,13 +19,7 @@ const Receive = ({ width = 24, height = 24, stroke = "#ffffff", className = "" }
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <path
-        d="M12 7.5V16.5"
-        stroke={stroke}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+      <path d="M12 7.5V16.5" stroke={stroke} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </g>
     <path
       d="M22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2"
@@ -34,20 +28,8 @@ const Receive = ({ width = 24, height = 24, stroke = "#ffffff", className = "" }
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    <path
-      d="M17 3V7H21"
-      stroke={stroke}
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M22 2L17 7"
-      stroke={stroke}
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+    <path d="M17 3V7H21" stroke={stroke} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M22 2L17 7" stroke={stroke} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 

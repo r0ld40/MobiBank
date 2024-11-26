@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Pay = ({ width = 24, height = 24, stroke = "#ffffff", ...props }) => (
+const Pay = ({ width = 24, height = 24, stroke = '#ffffff', ...props }) => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -20,13 +20,7 @@ const Pay = ({ width = 24, height = 24, stroke = "#ffffff", ...props }) => (
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <path
-        d="M12 7.5V16.5"
-        stroke={stroke}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+      <path d="M12 7.5V16.5" stroke={stroke} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </g>
     <path
       d="M22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2"
@@ -35,20 +29,8 @@ const Pay = ({ width = 24, height = 24, stroke = "#ffffff", ...props }) => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    <path
-      d="M22 6V2H18"
-      stroke={stroke}
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M17 7L22 2"
-      stroke={stroke}
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+    <path d="M22 6V2H18" stroke={stroke} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M17 7L22 2" stroke={stroke} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
