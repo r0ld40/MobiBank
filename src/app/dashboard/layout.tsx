@@ -9,7 +9,7 @@ export default function RootDash({
   return (
     <div suppressHydrationWarning={true} className="flex bg-[#FBFBFB] overflow-hidden">
       <Aside />
-      <main className="w-full flex flex-col items-center p-7">
+      <main className="w-full flex flex-col items-center p-3">
         <DashSearch />
         {children}
       </main>

@@ -12,26 +12,87 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { DatePicker } from './pick-date';
 
-const info = [
-  {
-    id: 1,
-    name: 'João da Silva',
-    cpf: '000.000.000-00',
-    conta: 'Um Banco ai S.A',
-  },
-];
+type Transaction = {
+  id: number;
+  mode: string;
+  value: number;
+  date: string;
+  method: string;
+};
+
+type UserData = {
+  id: number;
+  name: string;
+  cpf: string;
+  conta: string;
+  transactions: Transaction[];
+};
 
 export default function PixTransfer() {
   const [money, setMoney] = useState(0);
+
+  const [data, setData] = useState<Record<number, UserData>>(); // info dos clientes do banco
+  const user = data?.[0]; // info do usuário
+
+  const getData = async () => {
+    const response = await fetch('/api/info', {
+      method: 'GET',
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      setData(data);
+      console.log(data);
+    } else {
+      console.error('Erro ao buscar dados:', response.statusText);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const updateData = async () => {
+    const response = await fetch('/api/info', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data), // Dados para atualizar
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data); // Exibe a resposta da API
+    } else {
+      console.error('Erro ao atualizar dados:', response.statusText);
+    }
+  };
 
   const handleChangeValue = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseFloat(event.target.value);
     if (!isNaN(value) && value >= 0) {
       setMoney(value);
     }
+  };
+
+  const Submit = () => {
+    const date = new Date();
+
+    if (user && user.transactions) {
+      user.transactions.push({
+        id: user.transactions.length + 1,
+        mode: 'Pix',
+        value: money,
+        date: date.toISOString(),
+        method: 'send',
+      });
+    }
+
+    updateData();
   };
 
   return (
@@ -55,6 +116,7 @@ export default function PixTransfer() {
                 <input
                   placeholder="0,00"
                   type="number"
+                  min={0}
                   step="0.01"
                   value={money > 0 ? money : ''}
                   onChange={handleChangeValue}
@@ -80,23 +142,25 @@ export default function PixTransfer() {
             </li>
             <li className="w-full flex items-center justify-between">
               <strong>CPF</strong>
-              <p>{info[0].cpf.replace(/^\d{3}/, '***').replace(/\d{2}$/, '**')}</p>
+              <p>{user?.cpf?.replace(/^\d{3}/, '***').replace(/\d{2}$/, '**')}</p>
             </li>
             <li className="w-full flex items-center justify-between">
               <strong>Conta</strong>
-              <p>{info[0].conta}</p>
+              <p>{user?.conta}</p>
             </li>
           </ul>
         </div>
       </div>
-      <Link
-        href={'/dashboard/pix/loading'}
-        className={`w-fit p-5 px-[80px] flex justify-center items-center rounded-lg font-semibold ${
-          money > 0 ? 'bg-[#0980B4] hover:bg-black hover:bg-opacity-20' : 'bg-gray-300 cursor-not-allowed'
-        } transition`}
-      >
-        Transferir
-      </Link>
+      <button onClick={() => Submit()}>
+        <Link
+          href={'/dashboard/pix/loading'}
+          className={`w-fit p-5 px-[80px] flex justify-center items-center rounded-lg font-semibold ${
+            money > 0 ? 'bg-[#0980B4] hover:bg-black hover:bg-opacity-20' : 'bg-gray-300 cursor-not-allowed'
+          } transition`}
+        >
+          Transferir
+        </Link>
+      </button>
     </div>
   );
 }
