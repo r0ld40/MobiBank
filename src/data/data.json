@@ -1,0 +1,102 @@
+{
+  "0": {
+    "id": 1,
+    "name": "João da Silva",
+    "cpf": "000.000.000-00",
+    "conta": "00001-0",
+    "agencia": "0000",
+    "phone": "(99) 99999-9999",
+    "operator": "Tim",
+    "transactions": [
+      {
+        "id": 1,
+        "mode": "Pix",
+        "value": 34,
+        "date": "2024-11-27T17:46:12.046Z",
+        "method": "send",
+        "to": "Uber"
+      },
+      {
+        "id": 2,
+        "mode": "Pix",
+        "value": 34,
+        "date": "2024-11-27T17:46:12.046Z",
+        "method": "send",
+        "to": "Uber"
+      },
+      {
+        "id": 3,
+        "mode": "Pix",
+        "value": 34,
+        "date": "2024-11-27T17:46:12.046Z",
+        "method": "send",
+        "to": "Uber"
+      },
+      {
+        "id": 4,
+        "mode": "Pix",
+        "value": 34,
+        "date": "2024-11-27T17:46:12.046Z",
+        "method": "send",
+        "to": "Uber"
+      },
+      {
+        "id": 5,
+        "mode": "Pix",
+        "value": 34,
+        "date": "2024-11-27T17:46:12.046Z",
+        "method": "send",
+        "to": "Uber"
+      },
+      {
+        "id": 6,
+        "mode": "Carteira",
+        "value": 0,
+        "date": "2024-12-05T13:25:04.155Z",
+        "method": "send",
+        "to": "Tim"
+      },
+      {
+        "id": 7,
+        "mode": "Carteira",
+        "value": 15,
+        "date": "2024-12-05T13:33:48.419Z",
+        "method": "send",
+        "to": "Tim"
+      },
+      {
+        "id": 8,
+        "mode": "Carteira",
+        "value": 40,
+        "date": "2024-12-05T14:39:06.138Z",
+        "method": "send",
+        "to": "Nextel"
+      },
+      {
+        "id": 9,
+        "mode": "Pix",
+        "value": 34343,
+        "date": "2024-12-05T14:42:27.490Z",
+        "method": "send"
+      },
+      {
+        "id": 10,
+        "mode": "Cartão de Crédito",
+        "value": 15,
+        "date": "2024-12-05T14:43:06.114Z",
+        "method": "send",
+        "to": "Tim"
+      }
+    ],
+    "recently": [
+      {
+        "id": 10,
+        "mode": "Cartão de Crédito",
+        "value": 15,
+        "date": "2024-12-05T14:43:06.114Z",
+        "method": "send",
+        "to": "Tim"
+      }
+    ]
+  }
+}
