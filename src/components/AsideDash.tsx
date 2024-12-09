@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import Logo from '@/assets/mobi-logo-dash.png';
+import Logo from '@/assets/mobi-logo.png';
 import React from 'react';
 import Link from 'next/link';
 import Config from '@/assets/config';
