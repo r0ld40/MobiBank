@@ -6,7 +6,7 @@ export default function Card() {
   const nameUser = 'João da Silva';
   const dataValid = '00/00';
 
-  return(
+  return (
     <div className="w-[338px] h-[213px] flex flex-col justify-between p-4 rounded-lg bg-black text-white">
       <div className="w-full flex justify-between">
         <Image src={Logo} alt="logo" width={55} />
@@ -18,5 +18,5 @@ export default function Card() {
         <p>{dataValid}</p>
       </div>
     </div>
-  )
+  );
 }

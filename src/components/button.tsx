@@ -1,8 +1,15 @@
 interface ButtonProps {
-  children: string
-  className?: string
+  children: string;
+  className?: string;
+  back?: string;
+  text?: string;
 }
 
-export default function Button({children, className}: ButtonProps) {
-  return <button className={`bg-[#4FACFE] p-2 px-6 rounded-full font-semibold text-white hover:bg-white hover:text-black transition ${className}`}>{children}</button>
+export default function Button({
+  children,
+  className = 'p-2 px-6 rounded-full',
+  back = 'bg-[#4FACFE]',
+  text = 'text-white hover:bg-white hover:text-black',
+}: ButtonProps) {
+  return <button className={`${back} ${text} font-semibold transition ${className}`}>{children}</button>;
 }
