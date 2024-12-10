@@ -1,16 +1,16 @@
-import Verified from "@/assets/verified";
-import Button from "@/components/button";
-import Card from "@/components/card";
+import Verified from '@/assets/verified';
+import Button from '@/components/button';
+import Card from '@/components/card';
 
 const Cards = [
   { id: 1, text: 'Altere seu limite' },
   { id: 2, text: 'Rendimento de 104% (CDI)' },
   { id: 3, text: '100% mobile banking' },
   { id: 4, text: 'lorem' },
-]
+];
 
 export default function CardDiv() {
-  return(
+  return (
     <div className="h-fit flex justify-between gap-5 px-[400px]">
       <div className="flex flex-col gap-12">
         <p className="font-semibold text-3xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -23,8 +23,8 @@ export default function CardDiv() {
           ))}
         </div>
         <div className="flex gap-4">
-          <Button className="bg-black text-white border-2 border-black">Reservar Cartão</Button>
-          <Button className="border-2 border-black bg-white text-black hover:bg-[#000000] hover:text-white">Saber Mais</Button>
+          <Button back="bg-black hover:bg-white border-2 border-black">Reservar Cartão</Button>
+          <Button back="bg-[#000000] border-2 border-black">Saber Mais</Button>
         </div>
       </div>
       <div className="flex items-center">
@@ -33,5 +33,5 @@ export default function CardDiv() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -7,7 +7,6 @@ export default function CardClient() {
   const [eye, setEye] = React.useState(true);
   const saldo = '0,00';
 
-
   return (
     <div className="w-fit h-full flex flex-col items-center gap-8 bg-white p-5 rounded-lg border-2">
       <h2 className="w-full font-semibold text-xl">Seu Saldo</h2>
