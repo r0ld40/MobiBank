@@ -29,10 +29,11 @@ type UserData = {
   cpf: string;
   conta: string;
   transactions: Transaction[];
+  recently: Transaction[];
 };
 
 export default function PixTransfer() {
-  const [money, setMoney] = useState(0);
+  const [money, setMoney] = useState(234.56);
 
   const [data, setData] = useState<Record<number, UserData>>(); // info dos clientes do banco
   const user = data?.[0]; // info do usuário
@@ -85,7 +86,17 @@ export default function PixTransfer() {
     if (user && user.transactions) {
       user.transactions.push({
         id: user.transactions.length + 1,
-        mode: 'Pix',
+        mode: 'TED/DOC',
+        value: money,
+        date: date.toISOString(),
+        method: 'send',
+      });
+
+      user.recently = [];
+
+      user.recently.push({
+        id: user.transactions.length + 1,
+        mode: 'TED/DOC',
         value: money,
         date: date.toISOString(),
         method: 'send',
@@ -98,9 +109,9 @@ export default function PixTransfer() {
   return (
     <div className="w-[58rem] h-[45rem] flex flex-col gap-5 justify-between items-center border-2 p-5 rounded-lg bg-white">
       <div className="w-full flex flex-col gap-5 items-center">
-        <Link href={'/dashboard/pix/QRCode'} className="w-full flex gap-2 items-center">
+        <Link href={'/dashboard/transfer/bank'} className="w-full flex gap-2 items-center">
           <Arrow color="#000000" size={20} rotate={180} />
-          <h2 className="w-fit font-semibold text-lg">Pagamento via Pix</h2>
+          <h2 className="w-fit font-semibold text-lg">Transferência</h2>
         </Link>
         <div className="w-full flex flex-col gap-5">
           <h2 className="font-semibold text-3xl">Transferindo</h2>
@@ -153,7 +164,7 @@ export default function PixTransfer() {
       </div>
       <button onClick={() => Submit()}>
         <Link
-          href={'/dashboard/pix/loading'}
+          href={'/dashboard/transfer/loading'}
           className={`w-fit p-5 px-[80px] flex justify-center items-center rounded-lg font-semibold ${
             money > 0 ? 'bg-[#0980B4] hover:bg-black hover:bg-opacity-20' : 'bg-gray-300 cursor-not-allowed'
           } transition`}

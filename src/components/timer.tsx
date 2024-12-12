@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface TimerRegrassivoProps {
@@ -47,7 +46,7 @@ export default function TimerRel({ tempoInicial }: TimerRegrassivoProps) {
   return (
     <Card className="w-[300px]">
       <CardHeader>
-        <CardTitle className="text-center">Timer Regressivo</CardTitle>
+        <CardTitle className="text-center">Tempo Restante</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-4 gap-2 text-center mb-4">
