@@ -14,6 +14,16 @@ const Icons = ({
   date: string;
   to: string;
 }) => {
+  const formatData = (data: string) => {
+    const date = new Date(data);
+
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear().toString();
+
+    return `${day}/${month}/${year}`;
+  };
+
   switch (method) {
     case 'send':
       return (
@@ -26,7 +36,7 @@ const Icons = ({
             </div>
             <div className="w-full flex justify-between text-[#B2B2B2] text-sm">
               <p>{to}</p>
-              <span>{date}</span>
+              <span>{formatData(date)}</span>
             </div>
           </div>
         </div>
@@ -42,7 +52,7 @@ const Icons = ({
             </div>
             <div className="w-full flex justify-between text-[#B2B2B2] text-sm">
               <p>{to}</p>
-              <span>{date}</span>
+              <span>{formatData(date)}</span>
             </div>
           </div>
         </div>

@@ -10,9 +10,9 @@ import Time from './timeDiv';
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Banner />
-      <div className="p-8">
+      <div className="w-full p-8">
         <Card />
       </div>
       <Services />

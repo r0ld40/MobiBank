@@ -42,7 +42,7 @@ export default function Form() {
           className="bg-transparent p-1 border-[#4FACFE] border-b-[1px] outline-none"
         />
       </div>
-      <Button>Enviar</Button>
+      <Button type="submit">Enviar</Button>
       <span className="text-[#C4C4C4] text-sm">Ao enviar, você está permitindo que o Mobibank entre em contato</span>
     </form>
   );

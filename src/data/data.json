@@ -2,10 +2,23 @@
   "0": {
     "id": 1,
     "name": "João da Silva",
+    "senha": "123456",
+    "pin": "1234",
     "cpf": "000.000.000-00",
+    "data-nascimento": "01/01/2000",
     "conta": "00001-0",
     "agencia": "0000",
+    "email": "joao@exemplo",
     "phone": "(99) 99999-9999",
+    "endereco": {
+      "pais": "Brasil",
+      "estado": "São Paulo",
+      "cidade": "São Paulo",
+      "bairo-rua": "Av. Paulista, 123",
+      "cep": "00000-000",
+      "numero": "123",
+      "complemento": "Casa"
+    },
     "operator": "Tim",
     "transactions": [
       {
@@ -86,6 +99,34 @@
         "date": "2024-12-05T14:43:06.114Z",
         "method": "send",
         "to": "Tim"
+      },
+      {
+        "id": 11,
+        "mode": "TED/DOC",
+        "value": 234.56,
+        "date": "2024-12-11T18:59:41.840Z",
+        "method": "send"
+      },
+      {
+        "id": 12,
+        "mode": "TED/DOC",
+        "value": 234.56,
+        "date": "2024-12-11T21:15:20.352Z",
+        "method": "send"
+      },
+      {
+        "id": 13,
+        "mode": "TED/DOC",
+        "value": 234.56,
+        "date": "2024-12-11T21:25:25.496Z",
+        "method": "send"
+      },
+      {
+        "id": 14,
+        "mode": "TED/DOC",
+        "value": 234.56,
+        "date": "2024-12-11T21:56:27.982Z",
+        "method": "send"
       }
     ],
     "recently": [
@@ -96,6 +137,27 @@
         "date": "2024-12-05T14:43:06.114Z",
         "method": "send",
         "to": "Tim"
+      },
+      {
+        "id": 2,
+        "mode": "TED/DOC",
+        "value": 234.56,
+        "date": "2024-12-11T21:15:20.352Z",
+        "method": "send"
+      },
+      {
+        "id": 3,
+        "mode": "TED/DOC",
+        "value": 234.56,
+        "date": "2024-12-11T21:25:25.496Z",
+        "method": "send"
+      },
+      {
+        "id": 4,
+        "mode": "TED/DOC",
+        "value": 234.56,
+        "date": "2024-12-11T21:56:27.982Z",
+        "method": "send"
       }
     ]
   }

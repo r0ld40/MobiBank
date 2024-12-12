@@ -3,6 +3,7 @@ interface ButtonProps {
   className?: string;
   back?: string;
   text?: string;
+  type?: 'button' | 'submit' | 'reset' | undefined;
 }
 
 export default function Button({
@@ -10,6 +11,11 @@ export default function Button({
   className = 'p-2 px-6 rounded-full',
   back = 'bg-[#4FACFE]',
   text = 'text-white hover:bg-white hover:text-black',
+  type = 'button',
 }: ButtonProps) {
-  return <button className={`${back} ${text} font-semibold transition ${className}`}>{children}</button>;
+  return (
+    <button type={type} className={`${back} ${text} font-semibold transition ${className}`}>
+      {children}
+    </button>
+  );
 }
